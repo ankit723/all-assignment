@@ -1,38 +1,546 @@
-.App {
+html{
+  scroll-behavior: smooth;
+  font-size: 1rem;
+}
+body{
+  margin: 0;
+  padding: 0;
+  background-color: rgb(255, 255, 255);
+  font-family: sans-serif;
+  background-image: url(./bg/bg1.jpg);
+  background-position: center;
+  background-repeat: repeat;
+  background-size: 7%;
+  background-color: #d9d7d7;
+  overflow-x: hidden;
+  transition: all 200ms linear;
+}
+h1{
+  text-decoration: underline;
+  text-decoration-thickness: 3px;
+  text-decoration-color: #730101a7;
+  text-underline-offset: 10px;
+}
+h3{
+  text-decoration: underline;
+  text-decoration-thickness: 3px;
+  text-decoration-color: #7f8201a7;
+  text-underline-offset: 10px;
+  font-size: 1.3rem;
+}
+
+.sidenav{
+  background-color: #840000c7;
+  height: 25rem;
+  width: 7rem;
+  margin-left: -10rem;
+  margin-top: 4rem;
+  padding-top: 10rem;
+  position: fixed;
+  border-radius: 355px;
+  z-index: 1;
+  transition: 0.5s;
+}
+
+.sidenav ul {
+  list-style-type: none;
+  margin: 0;
+  margin-top: -3rem;
+  padding: 0;
+  overflow: hidden;
+}
+
+.sidenav li {
+  width: 100%; 
+}
+
+.sidenav li a {
+  display: block; 
+  color: rgb(255, 255, 255); 
+  text-align: center; 
+  padding: 14px 16px; 
+  text-decoration: none; 
+  font-size: 1.2rem;
+  transition: 0.3s;
+}
+
+.sidenav li a:hover {
+  transform: scale(1.3);
+}
+
+.techstaffy{
+  margin-top: -10rem; 
+  margin-left: 29vw;
+  font-size: 3rem;
+}
+
+
+.main_container{
+  margin-top: 15rem;
+  margin-left: 15em;
+}
+
+#main_Heading{
+  margin-top: 7rem;
+}
+
+#main_para{
+  font-size: 1.5rem;
+  margin-right: 45rem;
+}
+
+.worker_image img{
+  margin-left: 35vw;
+  margin-top: 10rem;
+  height: 5rem;
+  width: 5rem;
+  cursor: pointer;
+}
+
+.worker_image img{
+  animation: updown 2s infinite;
+}
+
+@keyframes updown {
+  0% {
+    transform: rotate(90deg) translatex(0);
+  }
+  50% {
+    transform: rotate(90deg) translatex(-15px);
+  }
+  100% {
+    transform: rotate(90deg) translatex(0);
+  }
+}
+
+#about_us{
+  padding-top: 5rem;
+  margin-left: 33vw;
+}
+
+#about_us p{
+  margin-right: 9rem;
+  margin-left: -37rem;
+}
+
+#services{
+  padding-top: 4rem;
+  margin-top: 10rem;
+  margin-left: 33vw;
+}
+
+#services p{
+  margin-right: 9rem;
+  margin-left: -37rem;
+}
+
+.listofservice{
+  margin-left: -37rem;
+}
+
+#services_ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  margin-left: -37rem;
+  overflow: hidden;
+}
+
+#services_ul li {
+  width: 100%; 
+}
+
+
+
+#services_ul li a {
+  display: block; 
+  color: rgb(0, 0, 0); 
+  text-align: center; 
+  padding: 14px 16px; 
+  text-decoration: none; 
+  font-size: 1.2rem;
+  border-radius: 2rem;
+}
+
+#services_ul li a:hover {
+  background-color:#8e8c0083;
+}
+
+#services_ul li a h3{
+  margin-left: -83.5rem;
+}
+
+#services_ul li a p{
+  text-align: left;
+  margin-left: 1rem;
+}
+
+.contact{
+  padding-top: 5rem;
+  margin-top: 15rem;
+  text-align: center;
+  margin-left: -10rem;
+  margin-bottom: 10rem;
+}
+.contact span{
+  font-size: 1.2rem;
+}
+form {
+  width: 80%;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f2f2f2;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: #333;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+  background-color: #fff;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+  background-color: #fff;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+input[type="submit"] {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+  transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+  background-color: #555;
+}
+
+input[type="submit"]:focus {
+  outline: none;
+}
+
+.field-error {
+  color: red;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.form-message {
+  margin-top: 20px;
+  padding: 10px;
+  text-align: center;
+  color: #fff;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.form-message.success {
+  background-color: #4CAF50;
+}
+
+.form-message.error {
+  background-color: #f44336;
+}
+
+.ourwork{
+  padding-top: 5rem;
+  margin-top: 20rem;
+}
+
+.ourwork h1{
+  margin-left: 33vw;
+}
+
+.works {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  list-style: none;
+  margin: 0;
+  margin-top: 5rem  ;
+  padding: 0;
+}
+
+.works li {
+  flex-basis: 30%;
+  margin-bottom: 15rem;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.works img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-bottom: 1rem;
+}
+
+.works h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.works p {
+  font-size: 1rem;
+  margin: 0;
+}
+
+.works li:hover {
+  transform: scale(1.1);
+}
+
+.works img:hover {
+  filter: brightness(75%);
+}
+
+footer {
+  background-color: #1f1f1f;
+  color: #fff;
+  padding: 40px 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.col {
+  flex-basis: 100%;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+img {
+  max-width: 150px;
+  margin-bottom: 1rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+h3 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+form {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-wrap: wrap;
+}
+
+#email2{
+  flex-basis: 70%;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 2px;
+  margin-right: 1rem;
+}
+
+#submit2{
+  flex-basis: 25%;
+  background-color: #fff;
+  color: #333;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: background-color 0.5s;
+}
+
+#submit2:hover {
+  background-color: #333;
+  color: #fff;
+}
+
+.menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.menu li {
+  margin-right: 1rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.menu a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.menu a:hover {
+  color: #ccc;
+}
+
+p {
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+
+
+/* Adjustments for screens smaller than 768px */
+@media screen and (max-width: 768px) {
+  
+  html{
+    font-size: 2rem;
   }
-  to {
-    transform: rotate(360deg);
+  .sidenav {
+    margin-left: 0;
+    margin-top: 2rem;
+    padding-top: 4rem;
+    height: auto;
+    width: 100%;
+    border-radius: 0;
+  }
+  
+  .techstaffy {
+    margin-top: 0;
+    margin-left: 2rem;
+    font-size: 2rem;
+  }
+  
+  .main_container {
+    margin-top: 8rem;
+    margin-left: 2rem;
+  }
+  
+  #main_para {
+    margin-right: 0;
+  }
+  
+  .worker_image img {
+    margin-left: 0;
+    margin-top: 2rem;
+  }
+  
+  #about_us {
+    margin-left: 2rem;
+  }
+  
+  #about_us p {
+    margin-right: 0;
+    margin-left: 0;
+  }
+  
+  #services {
+    margin-left: 2rem;
+  }
+  
+  #services p {
+    margin-right: 0;
+    margin-left: 0;
+  }
+  
+  .listofservice {
+    margin-left: 0;
+  }
+  
+  #services_ul li a h3 {
+    margin-left: 0;
+  }
+  
+  .contact {
+    margin-left: 0;
+    margin-top: 8rem;
+  }
+}
+
+/* Adjustments for screens smaller than 576px */
+@media screen and (max-width: 576px) {
+  .worker_image img {
+    height: 3rem;
+    width: 3rem;
+  }
+  
+  .contact {
+    padding-top: 3rem;
+  }
+}
+/* adjust layout for screens smaller than 768px */
+@media (max-width: 767px) {
+  /* reduce the width of the services section and center it */
+  .services {
+    width: 100%;
+    margin: 0 auto;
+  }
+  
+  /* adjust the font size and line height of the services items */
+  .services li {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  
+  /* move the side navigation below the header */
+  .sidenav {
+    position: relative;
+    top: auto;
+    left: auto;
+    width: 100%;
+    margin-top: 24px;
+    padding: 0;
+    text-align: center;
+  }
+  
+  /* remove the float from the side navigation links */
+  .sidenav a {
+    float: none;
+  }
+}
+
+/* CSS for tablet devices */
+/* CSS for tablet devices */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .sidenav {
+    width: 250px;
+  }
+  .main {
+    margin-left: 250px;
+  }
+  .services {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .service {
+    width: calc(50% - 10px);
+    margin-bottom: 20px;
   }
 }
