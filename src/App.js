@@ -30,7 +30,7 @@ function App()
 
 {
   useEffect(() => {
-  document.title = "Techstaffy IT Solution";
+  document.title = "MyGenAI IT Solution";
     }, []);
   return (
     <>
